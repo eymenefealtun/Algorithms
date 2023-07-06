@@ -58,7 +58,6 @@ string GenerateParantheses()
         else if (currentBracket == rightBracket)
             paranthesesString = FindCurrentRightBracket(paranthesesString) == FindCurrentLeftBracket(paranthesesString) ? paranthesesString.Append(leftBracket) : paranthesesString.Append(currentBracket);
     }
-
     return paranthesesString.ToString();
 }
 
@@ -78,12 +77,7 @@ int FindCurrentLeftBracket(StringBuilder stringBuilder)
 
     for (int i = 0; i < stringBuilder.Length; i++)
     {
-        if (i == 0)
-        {
-            if (stringBuilder.ToString(0, 1) == "(")
-                numberOfLeftBracket++;
-        }
-        else if (stringBuilder.ToString(i, 1) == "(")
+        if (stringBuilder.ToString(i, 1) == "(")
             numberOfLeftBracket++;
     }
     return numberOfLeftBracket;
@@ -96,12 +90,7 @@ int FindCurrentRightBracket(StringBuilder stringBuilder)
 
     for (int i = 0; i < stringBuilder.Length; i++)
     {
-        if (i == 0)
-        {
-            if (stringBuilder.ToString(0, 1) == ")")
-                numberOfRightBracket++;
-        }
-        else if (stringBuilder.ToString(i, 1) == ")")
+        if (stringBuilder.ToString(i, 1) == ")")
             numberOfRightBracket++;
     }
     return numberOfRightBracket;
