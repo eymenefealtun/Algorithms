@@ -1,5 +1,4 @@
-﻿
-namespace MostFrequentNumber
+﻿namespace MostFrequentNumber
 {
     internal class Program
     {
@@ -20,7 +19,7 @@ namespace MostFrequentNumber
                 int currentNumber = intArray[i];
                 listOfInts.Add(currentNumber);
 
-                // If the number found before, it finds the index of number found inside the indexes array and increase it 1.
+                // If the number found before, it finds the index of number found inside the indexes array and increase by 1.
                 if (listOfInts.Contains(currentNumber))
                     indexes[listOfInts.FindIndex(x => x == currentNumber)]++;
             }
@@ -31,7 +30,6 @@ namespace MostFrequentNumber
             Console.ReadLine();
 
         }
-
 
     }
 }
