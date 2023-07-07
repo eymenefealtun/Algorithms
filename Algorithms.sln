@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MostFrequentNumber", "MostF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Strings", "Strings", "{CB5F8DC6-D6E9-43E2-AA2C-2A409F17D385}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ParanthesesGeneration", "ParanthesesGeneration\ParanthesesGeneration.csproj", "{D37F1FBE-6D72-4F3B-BD81-938AE2A8B354}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ParanthesesGeneration", "ParanthesesGeneration\ParanthesesGeneration.csproj", "{D37F1FBE-6D72-4F3B-BD81-938AE2A8B354}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BubbleSort", "BubbleSort\BubbleSort.csproj", "{19A2CBAA-13CC-4278-B453-53399D886510}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D37F1FBE-6D72-4F3B-BD81-938AE2A8B354}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D37F1FBE-6D72-4F3B-BD81-938AE2A8B354}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D37F1FBE-6D72-4F3B-BD81-938AE2A8B354}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19A2CBAA-13CC-4278-B453-53399D886510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19A2CBAA-13CC-4278-B453-53399D886510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19A2CBAA-13CC-4278-B453-53399D886510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19A2CBAA-13CC-4278-B453-53399D886510}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +42,7 @@ Global
 		{6EEB1C54-3395-427B-AD4B-97BAC2E647C6} = {17C9DB3B-DBC0-4422-9942-7BAF14437F13}
 		{CB5F8DC6-D6E9-43E2-AA2C-2A409F17D385} = {A8249420-BD6A-44CD-AE7A-CD50CA5EED71}
 		{D37F1FBE-6D72-4F3B-BD81-938AE2A8B354} = {CB5F8DC6-D6E9-43E2-AA2C-2A409F17D385}
+		{19A2CBAA-13CC-4278-B453-53399D886510} = {17C9DB3B-DBC0-4422-9942-7BAF14437F13}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DBDDB84-04AB-449E-B039-7B74CA18AF07}
