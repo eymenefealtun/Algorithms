@@ -6,15 +6,14 @@ do
     for (int i = 0; i < numbers.Length - 1; i++)
     {
         int currentNumberPlusOne = numbers[i + 1];
-        int currentNumber = numbers[i];
-        if (currentNumber > currentNumberPlusOne)
+        if (numbers[i] > numbers[i + 1])
         {
+            numbers[i + 1] = numbers[i];
             numbers[i] = currentNumberPlusOne;
-            numbers[i + 1] = currentNumber;
         }
     }           
 
-} while (!IsArrayDone());
+} while (!IsArrayDone());           
 
 
 Console.WriteLine();
@@ -30,5 +29,5 @@ bool IsArrayDone()
         if (numbers[i] < numbers[i - 1])
             isArrayValid = false;
     }
-    return isArrayValid;        
+    return isArrayValid;
 }
