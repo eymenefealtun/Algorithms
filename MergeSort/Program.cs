@@ -1,130 +1,69 @@
-﻿int[] array = new int[] { 1130, 925, 251, 299, 55, 553, 1415, 1014, 1339, 1239, 644, 636, 763, 341, 126, 597, 1338, 425, 993, 298, 276, 1305, 335, 847, 1242, 394, 67, 1476, 1098, 532, 453, 768, 550, 271, 1385, 1322, 952, 1259, 80, 131, 306, 755, 339, 305, 571, 147, 317, 1103, 951 };
+﻿int[] givenArray = new int[] { 8, 5, 3, 3, 46, 123, 34, 97, 45, 3, 7, 2, 89, 9, 234, 4, 89, 4, 3, 26, 4, 22, 8, 0, 45, 2, 1 };
 
-int length = array.Length;
+Console.WriteLine("Actual Array --> " + "{0}", string.Join(",", givenArray));
 
-bool _isFirstPartDone = true;
-bool _isSecondtPartDone = true;
+MergeSort(givenArray);
 
+Console.WriteLine("Sorted Array --> " + "{0}", string.Join(",", givenArray));
 
-Console.WriteLine("Actual Array --> " + "{0}", string.Join(",", array));
-
-SortMerge(array);
-
-Console.WriteLine("Sorted Array --> " + "{0}", string.Join(",", array));
 Console.ReadLine();
 
-
-void SortMerge(int[] numbers)
+void MergeSort(int[] array)
 {
-    while (!IsArrayDone(1))
+    if (array.Length > 1)
     {
-        for (int i = 0; i < length - 1; i++)
-        {
-            if (i <= length / 2)
-            {
-                int numberPlusOne = array[i + 1];
-                int currentNumber = array[i];
 
-                if (_isFirstPartDone)
-                {
-                    if (currentNumber > numberPlusOne)
-                    {
-                        array[i] = numberPlusOne;
-                        array[i + 1] = currentNumber;
-                    }
-                    i++;
-                }
-
-                else if (currentNumber > numberPlusOne)
-                {
-                    array[i] = numberPlusOne;
-                    array[i + 1] = currentNumber;
-                }
-            }
-        }
-        _isFirstPartDone = false;
-    }
-
-    while (!IsArrayDone(2))
-    {
-        for (int i = 0; i < length - 1; i++)
-        {
-            int numberPlusOne = array[i + 1];
-            int currentNumber = array[i];
-            if (i > length / 2)
-            {
-                if (_isSecondtPartDone)
-                {
-
-                    if (currentNumber > numberPlusOne)
-                    {
-                        array[i] = numberPlusOne;
-                        array[i + 1] = currentNumber;
-                    }
-                    i++;
-                }
+        int middleIndex = array.Length / 2;
 
 
-                else if (currentNumber > numberPlusOne)
-                {
-                    array[i] = numberPlusOne;
-                    array[i + 1] = currentNumber;
-                }
-            }
-        }
+        #region Sub arrays are splitted
+        int[] leftArray = new int[middleIndex];
+        int[] rightArray = new int[array.Length - middleIndex];
 
-        _isSecondtPartDone = false;
-    }
+        Array.Copy(array, 0, leftArray, 0, middleIndex);
+        Array.Copy(array, middleIndex, rightArray, 0, array.Length - middleIndex);
+        #endregion
 
-    while (!IsArrayDone(0))
-    {
-        for (int i = 0; i < length - 1; i++)
-        {
-            int numberPlusOne = array[i + 1];
-            int currentNumber = array[i];
-            if (currentNumber > numberPlusOne)
-            {
-                array[i] = numberPlusOne;
-                array[i + 1] = currentNumber;
-            }
-        }
+        MergeSort(leftArray);
+        MergeSort(rightArray);
+
+        Merge(array, leftArray, rightArray); 
+
     }
 
 }
 
-bool IsArrayDone(int? tr)
+void Merge(int[] array, int[] leftArray, int[] rightArray)
 {
-    if (tr == 0)
+    int leftIndex = 0, rightIndex = 0, arrayIndex = 0;
+
+    while (leftIndex < leftArray.Length && rightIndex < rightArray.Length)
     {
-        bool isDone = true;
-        for (int i = 0; i <= length - 2; i++)
+        if (rightArray[rightIndex] > leftArray[leftIndex])
         {
-            if (array[i] > array[i + 1])
-                isDone = false;
+            array[arrayIndex] = leftArray[leftIndex];
+            leftIndex++;
         }
-        return isDone;
+        else
+        {
+            array[arrayIndex] = rightArray[rightIndex];
+            rightIndex++;
+        }
+        arrayIndex++;
     }
 
-    else if (tr == 1)
+    while (leftIndex < leftArray.Length)
     {
-        bool isDone = true;
-        for (int i = 0; i <= length - 2; i++)
-        {
-            if (array[i] > array[i + 1] && i <= length / 2)
-                isDone = false;
-        }
-        return isDone;
+        array[arrayIndex] = leftArray[leftIndex];
+        leftIndex++;
+        arrayIndex++;
     }
 
-    else
+    while (rightIndex < rightArray.Length)
     {
-        bool isDone = true;
-        for (int i = 0; i <= length - 2; i++)
-        {
-            if (array[i] > array[i + 1] && i > length / 2)
-                isDone = false;
-        }
-        return isDone;
+        array[arrayIndex] = rightArray[rightIndex];
+        rightIndex++;
+        arrayIndex++;
     }
 
 }
