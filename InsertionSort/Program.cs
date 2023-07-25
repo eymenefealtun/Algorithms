@@ -11,7 +11,12 @@ Console.WriteLine("Sorted Array --> " + "{0}", string.Join(",", _givenArray));
 Console.ReadLine();
 
 
-void InsertionSort(int[] givenArray)
+void InsertionSort(in int[] givenArray)
+//well you see when you pass an input it copies it
+//but with using in
+//you are not copying it, just referencing to it
+//so if you have 1gb array you must use in or ref
+//so it doesnt copy 1gb again and again
 {
 
     for (int i = 0; i < givenArray.Length - 1; i++)
@@ -22,13 +27,15 @@ void InsertionSort(int[] givenArray)
         {
             givenArray[i] = givenArray[i + 1];
             givenArray[i + 1] = currentValue;
+
+            CheckLeftOvers(i, givenArray);
+
         }
 
-        CheckLeftOvers(i, givenArray);
     }
 
 }
-            
+
 
 void CheckLeftOvers(int index, int[] array)
 {
