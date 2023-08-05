@@ -25,6 +25,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SelectionSort", "SelectionS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "K-Nearest-Neighbor", "K-Nearest-Neighbor\K-Nearest-Neighbor.csproj", "{00F77D16-A15D-4045-A8F5-00873F49DFA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickSort", "QuickSort\QuickSort.csproj", "{DE1D6804-7A60-4EB6-A2C6-9622ADD9AC0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{00F77D16-A15D-4045-A8F5-00873F49DFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00F77D16-A15D-4045-A8F5-00873F49DFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00F77D16-A15D-4045-A8F5-00873F49DFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE1D6804-7A60-4EB6-A2C6-9622ADD9AC0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE1D6804-7A60-4EB6-A2C6-9622ADD9AC0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE1D6804-7A60-4EB6-A2C6-9622ADD9AC0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE1D6804-7A60-4EB6-A2C6-9622ADD9AC0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,6 +80,7 @@ Global
 		{5E2D511E-CF5E-4057-96FC-BB81D5A018A1} = {F9FB5995-D378-491D-B890-D18B60ADAA90}
 		{2273054C-D2E3-4A19-8BBF-351B94CE1CE1} = {F9FB5995-D378-491D-B890-D18B60ADAA90}
 		{00F77D16-A15D-4045-A8F5-00873F49DFA2} = {A8249420-BD6A-44CD-AE7A-CD50CA5EED71}
+		{DE1D6804-7A60-4EB6-A2C6-9622ADD9AC0A} = {F9FB5995-D378-491D-B890-D18B60ADAA90}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4DBDDB84-04AB-449E-B039-7B74CA18AF07}
